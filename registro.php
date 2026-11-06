@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif (strlen($password) < 6) {
         $mensaje = "La contraseña debe tener al menos 6 caracteres.";
     } elseif ($password !== $confirmar) {
-        $mensaje = "Las contraseñas no coinciden.";
+        $mensaje = "Las contraseñas no coinciden."; 
     } else {
         // Crear el hash 
         $hash = password_hash($password, PASSWORD_DEFAULT);
